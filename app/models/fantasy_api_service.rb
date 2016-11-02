@@ -29,6 +29,7 @@ class FantasyAPIService
   end
 
   private
+    # Decoding the api stats into the named stats
     def self.stats_hash
       {
         :"2" => :pass_att,
