@@ -24,4 +24,26 @@ RSpec.describe PlayerWeekStat, type: :model do
     ]
     expect(stat_names).to eq(expect_stat_names)
   end
+
+  it "returns an array of stats" do
+    player_week_stat = create(:player_week_stat)
+
+    stats_array = player_week_stat.stats_array
+    expected_stats_array = [
+      8,
+      2,
+      0,
+      0,
+      0,
+      0,
+      40,
+      25,
+      289,
+      3,
+      1,
+      2
+    ]
+
+    expect(stats_array).to eq(expected_stats_array)
+  end
 end
