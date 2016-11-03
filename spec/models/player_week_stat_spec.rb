@@ -7,7 +7,7 @@ RSpec.describe PlayerWeekStat, type: :model do
   end
 
   it "has stat name" do
-    stat_names = PlayerWeekStat.stat_names
+    stat_names = PlayerWeekStat.stat_names_for_header
     expect_stat_names = [
       "rush yds",
       "rush att",
