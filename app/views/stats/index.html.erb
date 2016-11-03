@@ -1,7 +1,7 @@
 
-<h2>Stats for QB</h2>
+<h2>Stats for All Positions</h2>
 
-<table class="stats_table">
+<table class="table stats_table">
   <thead class="stats_table_header">
       <th>Player Name</th>
       <% @stat_names.each do |stat_name| %>
@@ -9,13 +9,13 @@
       <% end %>
   </thead>
   <tbody class="stats_table_body">
+    <% @player_week_stats.each do |player_week_stat| %>
     <tr>
-      <% @player_week_stats.each do |player_week_stat| %>
-      <td><%= player_week_stat.player_name %></td>
+      <td><%= player_week_stat.name %></td>
       <% @raw_stat_names.each do |stat_name| %>
       <td><%= player_week_stat[stat_name] %></td>
       <% end %>
-      <% end %>
     </tr>
+    <% end %>
   </tbody>
 </table>

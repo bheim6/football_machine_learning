@@ -22,6 +22,7 @@ describe "Stats page" do
     end
 
     within(".stats_table_body") do
+      expect(page).to have_content("Peyton Manning")
       expect(page).to have_content(8)
       expect(page).to have_content(2)
       expect(page).to have_content(0)
