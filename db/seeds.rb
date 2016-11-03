@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+weeks = (1..16)
+seasons = (2009..2015)
+positions = ["QB", "RB", "WR", "TE"]
+seasons.each do |season|
+  weeks.each do |week|
+    positions.each do |position|
+      FantasyAPIService.by_season_week({week: week, season: season, position: position})
+      puts "#{position}s for week #{week} in season #{season} added"
+    end
+  end
+end
