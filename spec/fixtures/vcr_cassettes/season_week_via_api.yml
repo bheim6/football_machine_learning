@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.fantasy.nfl.com/v1/players/stats?format=json&position=QB&season=2015&statType=weekStats&week=9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      Expires:
+      - ''
+      Pragma:
+      - ''
+      Cache-Control:
+      - max-age=60
+      - public
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,OPTIONS,DELETE,PUT
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 02 Nov 2016 22:06:23 GMT
+      Content-Length:
+      - '9171'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"statType":"weekStats","season":"2015","week":"9","players":[{"id":"2543477","esbid":"BOR650964","gsisPlayerId":"00-0031407","name":"Blake
+        Bortles","position":"QB","teamAbbr":"JAX","stats":{"1":"1","2":"40","3":"24","4":"16","5":"381","6":"2","7":"2","8":"6","9":"1","13":"4","14":"32","30":"1","31":"2","70":"1","75":"1"},"seasonPts":316.12,"seasonProjectedPts":228.26,"weekPts":20.44,"weekProjectedPts":0},{"id":"497095","esbid":"BRA101548","gsisPlayerId":"00-0027854","name":"Sam
+        Bradford","position":"QB","teamAbbr":"MIN","stats":{"1":"1","2":"36","3":"25","4":"11","5":"295","6":"1","8":"1","11":"1","13":"1","14":"-1"},"seasonPts":194.9,"seasonProjectedPts":275.9,"weekPts":15.7,"weekProjectedPts":0},{"id":"2504211","esbid":"BRA371156","gsisPlayerId":"00-0019596","name":"Tom
+        Brady","position":"QB","teamAbbr":"NE","stats":{"1":"1","2":"39","3":"26","4":"13","5":"299","6":"2","7":"1","13":"1","14":"-1","70":"1"},"seasonPts":343.7,"seasonProjectedPts":372.82,"weekPts":17.86,"weekProjectedPts":0},{"id":"2504775","esbid":"BRE229498","gsisPlayerId":"00-0020531","name":"Drew
+        Brees","position":"QB","teamAbbr":"NO","stats":{"1":"1","2":"39","3":"28","4":"11","5":"387","6":"3","7":"1","8":"4","9":"1","13":"3","14":"-1","15":"1"},"seasonPts":304.2,"seasonProjectedPts":303.2,"weekPts":31.38,"weekProjectedPts":0},{"id":"2543465","esbid":"BRI129168","gsisPlayerId":"00-0031237","name":"Teddy
+        Bridgewater","position":"QB","teamAbbr":"MIN","stats":{"1":"1","2":"21","3":"13","4":"8","5":"144","7":"1","13":"3","14":"17","15":"1","32":"1"},"seasonPts":200.44,"seasonProjectedPts":273.14,"weekPts":13.46,"weekProjectedPts":0},{"id":"2543499","esbid":"CAR358797","gsisPlayerId":"00-0031280","name":"Derek
+        Carr","position":"QB","teamAbbr":"OAK","stats":{"1":"1","2":"44","3":"24","4":"20","5":"301","6":"4","7":"1","9":"1","13":"2","14":"3"},"seasonPts":271.28,"seasonProjectedPts":217.66,"weekPts":26.34,"weekProjectedPts":0},{"id":"2506562","esbid":"CAS541133","gsisPlayerId":"00-0023662","name":"Matt
+        Cassel","position":"QB","teamAbbr":"TEN","stats":{"1":"1","2":"38","3":"25","4":"13","5":"299","6":"3","7":"1","8":"4","13":"2","14":"17","31":"2","75":"1"},"seasonPts":66.84,"seasonProjectedPts":24.54,"weekPts":23.66,"weekProjectedPts":0},{"id":"2532820","esbid":"COU709400","gsisPlayerId":"00-0029604","name":"Kirk
+        Cousins","position":"QB","teamAbbr":"WAS","stats":{"1":"1","2":"40","3":"22","4":"18","5":"217","6":"1","7":"1","8":"1"},"seasonPts":293.44,"seasonProjectedPts":230.38,"weekPts":10.68,"weekProjectedPts":0},{"id":"2495824","esbid":"CUT288111","gsisPlayerId":"00-0024226","name":"Jay
+        Cutler","position":"QB","teamAbbr":"CHI","stats":{"1":"1","2":"40","3":"27","4":"13","5":"345","6":"2","7":"1","8":"1","9":"1","13":"3","14":"-2","30":"1","31":"1"},"seasonPts":226.46,"seasonProjectedPts":237.82,"weekPts":17.6,"weekProjectedPts":0},{"id":"2495143","esbid":"DAL659900","gsisPlayerId":"00-0027973","name":"Andy
+        Dalton","position":"QB","teamAbbr":"CIN","stats":{"1":"1","2":"27","3":"21","4":"6","5":"234","6":"3","8":"2","13":"6","14":"5"},"seasonPts":244.2,"seasonProjectedPts":260.98,"weekPts":21.86,"weekProjectedPts":0},{"id":"2506581","esbid":"FIT792915","gsisPlayerId":"00-0023682","name":"Ryan
+        Fitzpatrick","position":"QB","teamAbbr":"NYJ","stats":{"1":"1","2":"34","3":"21","4":"13","5":"272","6":"2","8":"2","13":"4"},"seasonPts":285.2,"seasonProjectedPts":0,"weekPts":18.88,"weekProjectedPts":0},{"id":"2532842","esbid":"FOL058566","gsisPlayerId":"00-0029567","name":"Nick
+        Foles","position":"QB","teamAbbr":"KC","stats":{"1":"1","2":"33","3":"18","4":"15","5":"168","8":"1","13":"1","14":"2","31":"1","75":"1"},"seasonPts":96.08,"seasonProjectedPts":210.98,"weekPts":6.92,"weekProjectedPts":0},{"id":"2495441","esbid":"GAB221145","gsisPlayerId":"00-0027948","name":"Blaine
+        Gabbert","position":"QB","teamAbbr":"SF","stats":{"1":"1","2":"25","3":"15","4":"10","5":"185","6":"2","7":"2","13":"8","14":"32"},"seasonPts":129.74,"seasonProjectedPts":10.2,"weekPts":14.6,"weekProjectedPts":0},{"id":"2543801","esbid":"GAR363225","gsisPlayerId":"00-0031345","name":"Jimmy
+        Garoppolo","position":"QB","teamAbbr":"NE","stats":{"1":"1","13":"1","14":"-1"},"seasonPts":-0.26,"seasonProjectedPts":27.48,"weekPts":-0.1,"weekProjectedPts":0},{"id":"2504833","esbid":"HIL586565","gsisPlayerId":"00-0020679","name":"Shaun
+        Hill","position":"QB","teamAbbr":"MIN","stats":{"1":"1","2":"6","3":"2","4":"4","5":"15","8":"1","13":"1","14":"-1"},"seasonPts":0.1,"seasonProjectedPts":22.76,"weekPts":0.5,"weekProjectedPts":0},{"id":"2539287","esbid":"JON565403","gsisPlayerId":"00-0030524","name":"Landry
+        Jones","position":"QB","teamAbbr":"PIT","stats":{"1":"1","2":"6","3":"4","4":"2","5":"79"},"seasonPts":22.02,"seasonProjectedPts":58.2,"weekPts":3.16,"weekProjectedPts":0},{"id":"2495186","esbid":"KAE371576","gsisPlayerId":"00-0027974","name":"Colin
+        Kaepernick","position":"QB","teamAbbr":"SF","stats":{"1":"1","2":"1","4":"1"},"seasonPts":110.2,"seasonProjectedPts":242.82,"weekPts":0,"weekProjectedPts":0},{"id":"2533031","esbid":"LUC524055","gsisPlayerId":"00-0029668","name":"Andrew
+        Luck","position":"QB","teamAbbr":"IND","stats":{"1":"1","2":"36","3":"21","4":"15","5":"252","6":"2","8":"1","13":"6","14":"34"},"seasonPts":130.84,"seasonProjectedPts":351.04,"weekPts":21.48,"weekProjectedPts":0},{"id":"2505996","esbid":"MAN473170","gsisPlayerId":"00-0022803","name":"Eli
+        Manning","position":"QB","teamAbbr":"NYG","stats":{"1":"1","2":"40","3":"26","4":"14","5":"213","6":"2","7":"2","13":"1","14":"-1"},"seasonPts":287.38,"seasonProjectedPts":267.28,"weekPts":12.42,"weekProjectedPts":0},{"id":"2543462","esbid":"MAN794607","gsisPlayerId":"00-0031409","name":"Johnny
+        Manziel","position":"QB","teamAbbr":"","stats":{"1":"1","2":"33","3":"15","4":"18","5":"168","6":"1","8":"3","13":"4","14":"31"},"seasonPts":95,"seasonProjectedPts":0,"weekPts":13.82,"weekProjectedPts":0},{"id":"2552466","esbid":"MAR186347","gsisPlayerId":"00-0032268","name":"Marcus
+        Mariota","position":"QB","teamAbbr":"TEN","stats":{"1":"1","2":"39","3":"28","4":"11","5":"371","6":"4","9":"1","11":"1","12":"1","13":"1","14":"5","32":"1","75":"1"},"seasonPts":210.02,"seasonProjectedPts":254,"weekPts":33.34,"weekProjectedPts":0},{"id":"2543497","esbid":"MCC176481","gsisPlayerId":"00-0031288","name":"AJ
+        McCarron","position":"QB","teamAbbr":"CIN","stats":{"1":"1","13":"2","14":"-2"},"seasonPts":55.26,"seasonProjectedPts":53,"weekPts":-0.2,"weekProjectedPts":0},{"id":"2495455","esbid":"NEW693984","gsisPlayerId":"00-0027939","name":"Cam
+        Newton","position":"QB","teamAbbr":"CAR","stats":{"1":"1","2":"30","3":"15","4":"15","5":"297","6":"3","7":"1","13":"9","14":"57","15":"1"},"seasonPts":389.08,"seasonProjectedPts":334.8,"weekPts":33.58,"weekProjectedPts":0},{"id":"2506121","esbid":"RIV651634","gsisPlayerId":"00-0022942","name":"Philip
+        Rivers","position":"QB","teamAbbr":"SD","stats":{"1":"1","2":"42","3":"26","4":"16","5":"280","6":"1","8":"2"},"seasonPts":284.48,"seasonProjectedPts":276.94,"weekPts":15.2,"weekProjectedPts":0},{"id":"2506363","esbid":"ROD339293","gsisPlayerId":"00-0023459","name":"Aaron
+        Rodgers","position":"QB","teamAbbr":"GB","stats":{"1":"1","2":"48","3":"25","4":"23","5":"369","6":"4","7":"1","8":"5","9":"1","11":"1","12":"1","13":"4","14":"22","31":"1","32":"1","75":"1"},"seasonPts":301.24,"seasonProjectedPts":367.44,"weekPts":32.96,"weekProjectedPts":0},{"id":"2506109","esbid":"ROE750381","gsisPlayerId":"00-0022924","name":"Ben
+        Roethlisberger","position":"QB","teamAbbr":"PIT","stats":{"1":"1","2":"44","3":"24","4":"20","5":"334","6":"2","7":"1","8":"1","9":"1","32":"1"},"seasonPts":228.12,"seasonProjectedPts":290.58,"weekPts":21.36,"weekProjectedPts":0},{"id":"310","esbid":"RYA238179","gsisPlayerId":"00-0026143","name":"Matt
+        Ryan","position":"QB","teamAbbr":"ATL","stats":{"1":"1","2":"45","3":"30","4":"15","5":"303","6":"1","8":"2","9":"1","13":"1","14":"2","75":"1"},"seasonPts":233.94,"seasonProjectedPts":285.22,"weekPts":16.32,"weekProjectedPts":0},{"id":"2532956","esbid":"TAN298716","gsisPlayerId":"00-0029701","name":"Ryan
+        Tannehill","position":"QB","teamAbbr":"MIA","stats":{"1":"1","2":"35","3":"26","4":"9","5":"307","8":"2","9":"1","13":"2","14":"3","20":"1","21":"9","30":"1","31":"2","70":"1","83":"-6"},"seasonPts":257.32,"seasonProjectedPts":288.7,"weekPts":11.48,"weekProjectedPts":0},{"id":"2495240","esbid":"TAY764868","gsisPlayerId":"00-0028118","name":"Tyrod
+        Taylor","position":"QB","teamAbbr":"BUF","stats":{"1":"1","2":"12","3":"11","4":"1","5":"181","6":"1","8":"3","11":"1","13":"10","14":"44"},"seasonPts":270.6,"seasonProjectedPts":215.38,"weekPts":15.64,"weekProjectedPts":0},{"id":"1037347","esbid":"WEB212765","gsisPlayerId":"00-0027796","name":"Joe
+        Webb","position":"QB","teamAbbr":"CAR","stats":{"1":"1","13":"1","14":"-1","27":"25","70":"1"},"seasonPts":-0.1,"seasonProjectedPts":0,"weekPts":-0.1,"weekProjectedPts":0},{"id":"2552033","esbid":"WIN623708","gsisPlayerId":"00-0031503","name":"Jameis
+        Winston","position":"QB","teamAbbr":"TB","stats":{"1":"1","2":"36","3":"19","4":"17","5":"247","13":"3","14":"24","15":"1"},"seasonPts":274.98,"seasonProjectedPts":196.1,"weekPts":18.28,"weekProjectedPts":0}]}'
+    http_version: 
+  recorded_at: Wed, 02 Nov 2016 22:06:23 GMT
+recorded_with: VCR 3.0.3
