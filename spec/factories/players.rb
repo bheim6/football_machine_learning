@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :player do
-    name "MyString"
-    position "MyString"
-    current_team "MyString"
+    name "Peyton Manning"
+    position "QB"
+    current_team "DEN"
   end
 end
