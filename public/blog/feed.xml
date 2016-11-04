@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mind On The Ball</title>
+    <description>Welcome to Mind On The Ball. We want to teach you about neural nets through fantasy football data.
+</description>
+    <link>http://yourdomain.com/blog/</link>
+    <atom:link href="http://yourdomain.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 03 Nov 2016 23:35:01 -0600</pubDate>
+    <lastBuildDate>Thu, 03 Nov 2016 23:35:01 -0600</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Intro &amp; Project Goals</title>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;As students at Turing School of Software &amp;amp; Design, Brian Heim and I are involved in a machine learning group. Near the end of the program, students are able to do a personal project. Brian and I chose to pool our resources to build a neural net from scratch.&lt;/p&gt;
+
+&lt;h2 id=&quot;project-goals&quot;&gt;Project Goals&lt;/h2&gt;
+&lt;p&gt;The goal we picked for our neural net was to predict fantasy football scores. This is an interesting problem, yet something we believe we can accomplish in the two weeks given for personal projects. While there are many fantasy football predictions with more time, money and data than us, this does not decrease our learning.&lt;/p&gt;
+
+&lt;p&gt;Learning about machine learning can be intimidating, and we want to make it more accessible. Additionally, given the relatively short timeframe students are at Turing it is difficult to maintain an institutional memory. By making this into a website, we hope to offer a resource to future students.&lt;/p&gt;
+
+&lt;p&gt;Given this, the goals of this project are (in order) -&lt;/p&gt;
+
+&lt;h4 id=&quot;learn-how-to-build-a-neural-net&quot;&gt;1. Learn how to build a neural net&lt;/h4&gt;
+
+&lt;h4 id=&quot;document-our-process-for-future-students-of-machine-learning&quot;&gt;2. Document our process for future students of machine learning&lt;/h4&gt;
+
+&lt;h4 id=&quot;accurately-predict-fantasy-football-scores&quot;&gt;3. Accurately predict fantasy football scores&lt;/h4&gt;
+
+&lt;h2 id=&quot;data&quot;&gt;Data&lt;/h2&gt;
+
+&lt;p&gt;The data used for this project is taken from the &lt;a href=&quot;http://api.fantasy.nfl.com/v1/docs/service?serviceName=playersStats&quot;&gt;NFL Fantasy API&lt;/a&gt;. The initial plan is to divide this up by player and position. Four weeks of stats for a player will be taken as input data, with an output of the fifth week’s fantasy football score. With ~27,000 individual week performances, we believe we have sufficient data to train our neural net. However, with only 3,100 individual week performances for quarter backs, we may not be able to predict this position very accurately&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Nov 2016 19:20:30 +0000</pubDate>
+        <link>http://yourdomain.com/blog/2016/11/03/intro-and-project-goals.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/blog/2016/11/03/intro-and-project-goals.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
