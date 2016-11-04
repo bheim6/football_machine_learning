@@ -1,0 +1,13 @@
+# Site settings
+title: Mind On The Ball
+email: example@should_we_use_a_real_email.com
+description: > # this means to ignore newlines until "baseurl:"
+  Welcome to Mind On The Ball. We want to teach you about neural nets through
+  fantasy football data.
+baseurl: "/blog" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username:
+github_username:
+
+# Build settings
+markdown: kramdown
