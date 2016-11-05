@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'faraday'
 gem "twitter-bootstrap-rails"
 gem 'jekyll', '2.5.3'
-
+gem 'rubystats', '~> 0.2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
