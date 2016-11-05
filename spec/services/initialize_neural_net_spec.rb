@@ -37,6 +37,21 @@ describe 'Neural net initializes' do
       expect(@nn.activations.last.row_count).to eq(1)
       expect(@nn.activations.last.column_count).to eq(1)
     end
+
+    it 'have values set' do
+      @nn.initial_activation = [0.2, 0.4, 0.8]
+
+      expected_matrix = Matrix[[0.2, 0.4, 0.8]]
+
+      expect(@nn.activations.first).to eq(expected_matrix)
+    end
+
+    it 'has many sets of values' do
+      @nn.initial_activation = [0.2, 0.4, 0.8], [0.1, 0.4, 0.5]
+
+      expected_matrix = Matrix[[0.2, 0.4, 0.8], [0.1, 0.4, 0.5]]
+      expect(@nn.activations.first).to eq(expected_matrix)
+    end
   end
 
   xit 'with random weights and biases for all the nodes' do
