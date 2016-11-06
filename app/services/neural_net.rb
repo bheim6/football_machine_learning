@@ -43,6 +43,10 @@ class NeuralNet
     activations.first
   end
 
+  def results
+    activations.last
+  end
+
   def forward_propagate
     layer_count.times do |layer|
       # activations[layer] = sigmoid(activations[layer - 1] * weights[layer])

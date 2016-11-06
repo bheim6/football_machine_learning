@@ -1,15 +1,26 @@
 class DataPrepService
+  MAX_STATS = [BigDecimal.new(350), BigDecimal.new(60), BigDecimal.new(8), BigDecimal.new(400), BigDecimal.new(25), BigDecimal.new(7), BigDecimal.new(80), BigDecimal.new(80), BigDecimal.new(750), BigDecimal.new(10), BigDecimal.new(10), BigDecimal.new(20)]
+
   def initialize(season_week, player)
     @season_week = season_week
     @player = player
   end
 
-  def self.week_prediction_array(season_week, player)
+  def self.last_four_games(season_week, player)
     data_prep = DataPrepService.new(season_week, player)
     if data_prep.previous_game_count < 4
       raise ArgumentError, 'Not enough games prior to given Season Week to calculate prediction'
     else
       data_prep.get_last_four_games
+    end
+  end
+
+  def self.last_four_normalized_games(season_week, player)
+    raw_data = self.last_four_games(season_week, player)
+    normalized = raw_data.map do |player_week_stats|
+      player_week_stats.map.with_index do |stat_value, i|
+        stat_value / MAX_STATS[i]
+      end
     end
   end
 
@@ -27,6 +38,7 @@ class DataPrepService
     end
     return stat_array
   end
+
 
   private
     attr_reader :season_week, :player
