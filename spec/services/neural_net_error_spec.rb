@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Neural Net learns' do
   it 'within a given error' do
     nn = NeuralNet.new(6,5,4)
-    error = 0.0001
+    error = 0.01
     correct_data = [0.2,0.7,0.9,0.3]
     correct_matrix  = Matrix[[0.2,0.7,0.9,0.3]]
     nn.initial_activation = [0.6, 0.2, 0.3, 0.4, 0.5, 0.9]
