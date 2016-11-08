@@ -57,6 +57,18 @@ class NeuralNet
     end
   end
 
+  def learn_within_error(correct_values, error)
+    current_error = 1
+    correct_matrix = format_to_matrix(correct_values)
+    while current_error > error do
+      forward_propagate
+      backward_propagate(correct_values)
+      current_error = (results - correct_matrix).max
+      min = (results - correct_matrix).min
+      current_error = min.abs if min.abs > current_error
+    end
+  end
+
   def backward_propagate(correct_values)
     correct_matrix = format_to_matrix(correct_values)
 
