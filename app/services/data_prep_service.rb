@@ -39,6 +39,14 @@ class DataPrepService
     return stat_array
   end
 
+  def self.normalize_stats(stats)
+    stats.map.with_index { |stat, i| stat / MAX_STATS[i]}
+  end
+
+  def self.denormalize_stats(stats)
+    stats.map.with_index { |stat, i| stat * MAX_STATS[i]}
+  end
+
 
   private
     attr_reader :season_week, :player
