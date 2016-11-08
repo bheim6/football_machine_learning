@@ -17,7 +17,7 @@ class NeuralNet
     @delta = Array.new(layer_count)
     @z_values = Array.new(layer_count)
     @learning_rate = 0.03
-    @gen = Rubystats::NormalDistribution.new(0.5, 0.15)
+    @gen = Rubystats::NormalDistribution.new(0.0, 0.33)
     set_initial_values
   end
 
@@ -55,7 +55,6 @@ class NeuralNet
         activations[layer] = sigmoid_matrix(z_values[layer])
       end
     end
-    # require "pry"; binding.pry
   end
 
   def backward_propagate(correct_values)
