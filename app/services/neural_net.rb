@@ -1,12 +1,12 @@
 class NeuralNet
   attr_reader :activations,
-  :layer_count,
-  :layer_sizes,
-  :delta
+              :layer_count,
+              :layer_sizes,
+              :delta
 
   attr_accessor :weights,
-  :biases,
-  :learning_rate
+                :biases,
+                :learning_rate
 
   def initialize(*layer_sizes)
     @layer_sizes = layer_sizes
@@ -55,16 +55,27 @@ class NeuralNet
         activations[layer] = sigmoid_matrix(z_values[layer])
       end
     end
+    # require "pry"; binding.pry
   end
 
   def backward_propagate(correct_values)
-    #Starting at last layer and counting backwards
     correct_matrix = format_to_matrix(correct_values)
-    delta[-1] = (activations.last - correct_matrix) * sigmoid_prime_matrix(z_values.last)
-    biases[-1] = biases[-1] - (learning_rate * delta[-1])
-    weights[-1] = activations[-2].map.with_index do |value, i|
-      weights[-1][i, 0] - (value * delta[-1][0, 0] * learning_rate)
-    end.transpose
+
+    (layer_count - 1).times do |index|
+      if index == 0
+        delta[-1] = (activations.last - correct_matrix).hadamard(sigmoid_prime_matrix(z_values.last))
+        biases[-1] -= learning_rate * delta[-1]
+        weights[-1] -= learning_rate * (activations[-2].transpose * delta[-1])
+      else
+        backwards_layer_index = -(index + 1)
+        delta[backwards_layer_index] =
+          (delta[backwards_layer_index + 1] * weights[backwards_layer_index + 1].transpose)
+          .hadamard(sigmoid_prime_matrix(z_values[backwards_layer_index]))
+
+        biases[backwards_layer_index] -= learning_rate * delta[backwards_layer_index]
+        weights[backwards_layer_index] -= learning_rate * (activations[backwards_layer_index - 1].transpose * delta[backwards_layer_index])
+      end
+    end
   end
 
 
