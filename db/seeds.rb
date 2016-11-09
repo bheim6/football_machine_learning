@@ -1,5 +1,5 @@
 weeks = (1..17)
-seasons = (2009..2016)
+seasons = (2014..2016)
 positions = ["QB", "RB", "WR", "TE"]
 seasons.each do |season|
   weeks.each do |week|
