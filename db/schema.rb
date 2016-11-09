@@ -51,6 +51,18 @@ ActiveRecord::Schema.define(version: 20161109031604) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "stored_neural_nets", force: :cascade do |t|
+    t.decimal  "first_weights",  default: [],              array: true
+    t.decimal  "hidden_weights", default: [],              array: true
+    t.decimal  "last_weights",   default: [],              array: true
+    t.decimal  "first_biases",   default: [],              array: true
+    t.decimal  "hidden_biases",  default: [],              array: true
+    t.decimal  "last_biases",    default: [],              array: true
+    t.integer  "layer_sizes",    default: [],              array: true
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
   create_table "week_predictions", force: :cascade do |t|
     t.decimal  "fantasy_score"
     t.integer  "player_id"
