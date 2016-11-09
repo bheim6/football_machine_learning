@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109000553) do
+ActiveRecord::Schema.define(version: 20161109031604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,8 +67,20 @@ ActiveRecord::Schema.define(version: 20161109000553) do
     t.decimal  "fantasy_score"
     t.integer  "player_id"
     t.integer  "season_week_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.decimal  "rush_yds",       default: "0.0"
+    t.decimal  "rush_att",       default: "0.0"
+    t.decimal  "rush_td",        default: "0.0"
+    t.decimal  "rec_yds",        default: "0.0"
+    t.decimal  "rec_made",       default: "0.0"
+    t.decimal  "rec_td",         default: "0.0"
+    t.decimal  "pass_att",       default: "0.0"
+    t.decimal  "pass_comp",      default: "0.0"
+    t.decimal  "pass_yds",       default: "0.0"
+    t.decimal  "pass_td",        default: "0.0"
+    t.decimal  "pass_int",       default: "0.0"
+    t.decimal  "sacked",         default: "0.0"
     t.index ["player_id"], name: "index_week_predictions_on_player_id", using: :btree
     t.index ["season_week_id"], name: "index_week_predictions_on_season_week_id", using: :btree
   end
