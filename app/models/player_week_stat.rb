@@ -1,6 +1,6 @@
 class PlayerWeekStat < ApplicationRecord
-  belongs_to :player, optional: true
-  belongs_to :season_week, optional: true
+  belongs_to :player
+  belongs_to :season_week
 
   def self.stat_names_for_header
     stat_names ||= get_stats_names

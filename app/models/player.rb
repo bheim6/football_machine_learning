@@ -1,3 +1,3 @@
 class Player < ApplicationRecord
-  has_many :player_week_stats, optional: true
+  has_many :player_week_stats
 end
