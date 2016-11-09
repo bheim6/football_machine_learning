@@ -2,9 +2,9 @@
   <h2 class="text-center">Predictions for week <%= @season_week.week %> <%= @season_week.season %></h2>
   <div class="row">
   <% @player_predictions.each do |player_prediction| %>
-    <div class="col-md-3">
+    <div class="span6">
       <div class="well">
-        <h4 class="text-center"><%= player_prediction.player.name %></h4>
+        <h3 class="text-center"><%= player_prediction.player.name %></h3>
         <ul>
           <li>
             <p>
