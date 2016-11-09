@@ -30,6 +30,7 @@ gem 'faraday'
 gem "twitter-bootstrap-rails"
 gem 'jekyll', '2.5.3'
 gem 'rubystats', '~> 0.2.5'
+gem 'yaml_db'
 gem 'rails_12factor', group: :production
 
 group :development, :test do
