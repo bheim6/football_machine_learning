@@ -12,6 +12,7 @@ RSpec.feature "Visitor can see Predictions Page" do
     player_week_stat2 = create(:player_week_stat, season_week: season_week2, player: dc)
     player_week_stat3 = create(:player_week_stat, season_week: season_week3, player: dc)
     player_week_stat4 = create(:player_week_stat, season_week: season_week4, player: dc)
+    player_week_stat5 = create(:player_week_stat, season_week: season_week5, player: dc)
 
     nn = NeuralNet.new(48,30,12)
 
@@ -23,7 +24,7 @@ RSpec.feature "Visitor can see Predictions Page" do
 
     visit predictions_path
 
-    expect(page).to have_content("Derek Carr:")
+    expect(page).to have_content("Derek Carr")
     expect(page).to have_content("Passing Yards:")
     expect(page).to have_content("Passing Attempts:")
     expect(page).to have_content("Passing Completions:")

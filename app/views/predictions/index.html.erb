@@ -1,34 +1,72 @@
-<%= @player.name %>:
-
-<ul>
-  <li>
-    <p>
-      Passing Yards: <%= @results[8] %>
-    </p>
-  </li>
-  <li>
-    <p>
-      Passing Attempts: <%= @results[6] %>
-    </p>
-  </li>
-  <li>
-    <p>
-      Passing Completions: <%= @results[7] %>
-    </p>
-  </li>
-  <li>
-    <p>
-      Passing Touchdowns: <%= @results[9] %>
-    </p>
-  </li>
-  <li>
-    <p>
-      Interceptions: <%= @results[10] %>
-    </p>
-  </li>
-  <li>
-    <p>
-      Sacked: <%= @results[11] %>
-    </p>
-  </li>
-</ul>
+<div class="row">
+<h2>Predictions for week <%= @season_week.week %> <%= @season_week.season %></h2>
+<% @player_predictions.each do |player_prediction| %>
+  <div class="col-md-6">
+    <div class="container-fluid well">
+      <h4><%= player_prediction.player.name %></h4>
+      <ul>
+        <li>
+          <p>
+            Rushing Yards: <%= player_prediction.rush_yds %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Rushing Attempts: <%= player_prediction.rush_att %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Rushing Touchdowns: <%= player_prediction.rush_td %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Recieving Yards: <%= player_prediction.rec_yds %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Receptions: <%= player_prediction.rec_made %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Recieving Touchdowns: <%= player_prediction.rec_td %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Passing Attempts: <%= player_prediction.pass_att %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Passing Completions: <%= player_prediction.pass_comp %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Passing Yards: <%= player_prediction.pass_yds %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Passing Touchdowns: <%= player_prediction.pass_td %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Interceptions: <%= player_prediction.pass_int %>
+          </p>
+        </li>
+        <li>
+          <p>
+            Sacked: <%= player_prediction.sacked %>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+<% end %>
+</div>

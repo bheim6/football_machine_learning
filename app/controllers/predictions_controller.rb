@@ -2,14 +2,15 @@ class PredictionsController < ApplicationController
   def index
     nn = StoredNeuralNet.last.revive_net
 
-    season_week = SeasonWeek.last
+    @season_week = SeasonWeek.find_by(season: 2016, week: 10)
 
-    player = Player.find_by(name: "Derek Carr")
+    players = @season_week.players
 
-    nn.initial_activation = DataPrepService.last_four_normalized_games(season_week, player).flatten
-
-    nn.forward_propagate
-    @player = player
-    @results = DataPrepService.denormalize_stats(nn.results).map { |e| e.to_f }.to_a[0]
+    @player_predictions = players.map do |player|
+      data = DataPrepService.last_four_normalized_games(@season_week, player).flatten
+      nn.initial_activation = data
+      nn.forward_propagate
+      WeekPrediction.from_neural_net_results(nn.results, @season_week, player)
+    end
   end
 end
