@@ -17,3 +17,7 @@
  .button_to div {
   display: inline;
 }
+
+.home_image img{
+  height: 250px;
+}
