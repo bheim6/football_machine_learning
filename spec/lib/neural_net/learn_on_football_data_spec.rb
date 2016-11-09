@@ -19,7 +19,7 @@ describe 'Neural Net learns' do
     correct_matrix = Matrix[answer]
 
     nn = NeuralNet.new(48,30,12)
-    error = 0.1
+    error = 0.2
     nn.initial_activation = data.flatten
     nn.learn_within_error(answer,error)
 
@@ -56,7 +56,7 @@ describe 'Neural Net learns' do
     correct_matrix = Matrix[answer_1, answer_2]
 
     nn = NeuralNet.new(48,30,12)
-    error = 0.1
+    error = 0.2
     nn.initial_activation = data
     nn.learn_within_error(answer,error)
 
