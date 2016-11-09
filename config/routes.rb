@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'home#index'
+  get '/stats', to: 'stats#index'
+  get '/learn', to: 'posts#index'
+  get '/learn/:id', to: 'posts#show'
+  get '/predictions', to: 'predictions#index'
 end

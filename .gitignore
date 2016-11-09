@@ -15,3 +15,9 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore coverage
+coverage
+
+# Ignore VCR cassette folder
+/spec/fixtures/vcr_cassettes/*

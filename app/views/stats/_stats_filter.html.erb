@@ -1,0 +1,25 @@
+<div class="well">
+  <div id="position-filter">
+    Filter Results By:
+      <%= button_to "Quarter Back", stats_path, params: request.query_parameters.merge({position: "QB"}), method: :get, class: "btn btn-primary" %>
+      <%= button_to "Running Back", stats_path, params: request.query_parameters.merge({position: "RB"}), method: :get, class: "btn btn-primary" %>
+      <%= button_to "Wide Receiver", stats_path, params: request.query_parameters.merge({position: "WR"}), method: :get, class: "btn btn-primary" %>
+      <%= button_to "Tight End", stats_path, params: request.query_parameters.merge({position: "TE"}), method: :get, class: "btn btn-primary" %>
+  </div>
+
+  <br>
+  <div id="season-filter">
+    Season:
+    <% (2009..2016).each do |i| %>
+      <%= button_to "#{i}", stats_path, params: request.query_parameters.merge({season: i}), method: :get, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <br>
+  <div id="week-filter">
+    Week:
+    <% (1..17).each do |i| %>
+      <%= button_to "#{i}", stats_path, params: request.query_parameters.merge({week: i}), method: :get, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
