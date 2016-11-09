@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103012947) do
+ActiveRecord::Schema.define(version: 20161109000553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(version: 20161103012947) do
     t.integer  "season"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "stored_neural_nets", force: :cascade do |t|
+    t.decimal  "weights",     default: [],              array: true
+    t.decimal  "biases",      default: [],              array: true
+    t.integer  "layer_sizes", default: [],              array: true
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "week_predictions", force: :cascade do |t|
