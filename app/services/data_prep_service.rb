@@ -47,6 +47,17 @@ class DataPrepService
     stats.map.with_index { |stat, i| stat * MAX_STATS[i]}
   end
 
+  def self.player_predictions(season_week)
+    nn = StoredNeuralNet.last.revive_net
+    players = season_week.players
+    players.map do |player|
+      data = DataPrepService.last_four_normalized_games(season_week, player).flatten
+      nn.initial_activation = data
+      nn.forward_propagate
+      WeekPrediction.from_neural_net_results(nn.results, season_week, player)
+    end
+  end
+
 
   private
     attr_reader :season_week, :player
