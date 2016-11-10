@@ -3,6 +3,9 @@
     <a href="/" class='brand'>Mind On The Ball</a>
     <div class="container-fluid">
         <ul class="nav navbar-nav pull-right">
+            <li><%= link_to "Stats", stats_path %></li>
+            <li><%= link_to "Predictions", predictions_path %></li>
+            <li><%= link_to "Blog", '/blog' %></li>
           <% if current_user %>
             <li><%=  link_to "Hello, #{current_user.name}", root_path %></li>
             <li><%= link_to "Logout", logout_path, method: :delete %></li>
