@@ -149,6 +149,7 @@ pre {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
+  background-color: black;
   position: relative; }
 
 .site-title {
@@ -158,7 +159,7 @@ pre {
   margin-bottom: 0;
   float: left; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: #fdfdfd; }
 
 .site-nav {
   float: right;
@@ -166,7 +167,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #111;
+    color: #fdfdfd;
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
@@ -175,7 +176,7 @@ pre {
       position: absolute;
       top: 9px;
       right: 30px;
-      background-color: #fdfdfd;
+      background-color: black;
       border: 1px solid #e8e8e8;
       border-radius: 5px;
       text-align: right; }
@@ -207,10 +208,12 @@ pre {
  */
 .site-footer {
   border-top: 1px solid #e8e8e8;
+  background-color: black;
   padding: 30px 0; }
 
 .footer-heading {
   font-size: 18px;
+  color: #fdfdfd;
   margin-bottom: 15px; }
 
 .contact-list,

@@ -10,7 +10,17 @@
   <body>
     <%= render partial: 'shared/navbar' %>
     <div class="container">
+      <% flash.each do |type, message| %>
+      <div class="alert alert-<%= type %>">
+        <%= message %>
+      </div>
+      <% end %>
       <%= yield %>
     </div>
   </body>
+  <footer>
+  <div class="container text-center">
+    <p class="muted credit">© Mind On The Ball 2016</p>
+  </div>
+</footer>
 </html>

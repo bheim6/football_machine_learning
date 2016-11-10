@@ -21,3 +21,6 @@ coverage
 
 # Ignore VCR cassette folder
 /spec/fixtures/vcr_cassettes/*
+
+# Ignore application configuration
+/config/application.yml
