@@ -1,11 +1,6 @@
 class StatsController < ApplicationController
   def index
-    @player_week_stats = Player
-      .joins(:player_week_stats)
-      .select('player_week_stats.*, players.name')
-      .where(position: position)
-      .joins('INNER JOIN season_weeks ON season_weeks.id = player_week_stats.season_week_id')
-      .where('season_weeks.season = ? AND season_weeks.week = ?', season, week)
+    @player_week_stats = PlayerWeekStat.stats_for_table(position, season, week)
 
     @stat_names = PlayerWeekStat.stat_names_for_header
     @raw_stat_names = PlayerWeekStat.stat_names
