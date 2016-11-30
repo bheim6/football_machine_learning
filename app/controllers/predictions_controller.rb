@@ -2,7 +2,7 @@ class PredictionsController < ApplicationController
   def index
     nn = StoredNeuralNet.last.revive_net
 
-    @season_week = SeasonWeek.find_by(season: 2016, week: 11)
+    @season_week = SeasonWeek.find_by(season: 2016, week: 10)
 
     players = @season_week.players
 
