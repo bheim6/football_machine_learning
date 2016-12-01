@@ -6,9 +6,31 @@
 </description>
     <link>http://yourdomain.com/blog/</link>
     <atom:link href="http://yourdomain.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Nov 2016 08:19:40 -0700</pubDate>
-    <lastBuildDate>Wed, 30 Nov 2016 08:19:40 -0700</lastBuildDate>
+    <pubDate>Thu, 01 Dec 2016 13:23:14 -0700</pubDate>
+    <lastBuildDate>Thu, 01 Dec 2016 13:23:14 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Neural Net Backwards Propagation</title>
+        <description>&lt;p&gt;&lt;em&gt;Post coming soon!&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Dec 2016 14:11:30 +0000</pubDate>
+        <link>http://yourdomain.com/blog/2016/12/01/neural-net-backpropagation.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/blog/2016/12/01/neural-net-backpropagation.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Neural Net Basics and Forward Propagation</title>
+        <description>&lt;p&gt;&lt;em&gt;Post coming soon!&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Nov 2016 14:11:30 +0000</pubDate>
+        <link>http://yourdomain.com/blog/2016/11/23/neural-net-basics-and-forward-propagation.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/blog/2016/11/23/neural-net-basics-and-forward-propagation.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Intro &amp; Project Goals</title>
