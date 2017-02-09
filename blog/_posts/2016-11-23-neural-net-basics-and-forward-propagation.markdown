@@ -4,6 +4,7 @@ title:  "Neural Net Basics and Forward Propagation"
 date:   2016-11-23 14:11:30
 author: "Brian Heim"
 ---
+
 ## What is a Neural Net?
 
 A Neural Net at its most basic level is a machine learning algorithm that uses a series of "decision-making" nodes to predict an outcome.

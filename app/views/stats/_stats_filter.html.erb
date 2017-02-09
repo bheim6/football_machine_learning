@@ -10,7 +10,7 @@
   <br>
   <div id="season-filter">
     Season:
-    <% (2009..2016).each do |i| %>
+    <% (2013..2016).each do |i| %>
       <%= button_to "#{i}", stats_path, params: request.query_parameters.merge({season: i}), method: :get, class: "btn btn-primary" %>
     <% end %>
   </div>
