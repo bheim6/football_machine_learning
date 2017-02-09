@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Neural Net Basics and Forward Propagation</title>
+  <meta name="description" content="What is a Neural Net?">
+
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/blog/2016/11/23/neural-net-basics-and-forward-propagation.html">
+  <link rel="alternate" type="application/rss+xml" title="Mind On The Ball" href="http://yourdomain.com/blog/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mind On The Ball</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+
+
+          <a class="page-link" href="/blog/about/">About</a>
+
+
+
+
+
+
+
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Neural Net Basics and Forward Propagation</h1>
+    <p class="post-meta">Nov 23, 2016 • Brian Heim</p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="what-is-a-neural-net">What is a Neural Net?</h2>
+
+<p>A Neural Net at its most basic level is a machine learning algorithm that uses a series of “decision-making” nodes to predict an outcome.</p>
+
+<ul>
+  <li>When researching we found this literature to be very helpful and would encourage anyone who is interested in building a neural net to check it out: <a href="http://neuralnetworksanddeeplearning.com/about.html">link to Neural Net and Deep Learning book</a></li>
+</ul>
+
+<h2 id="basic-architecture">Basic Architecture</h2>
+
+<p>All Neural Nets must have at least two layers, an input layer (where data is introduced to the net, either training data, or data used in making a prediction), and an output layer (result of the input layer data moving through the net). However, most neural nets contain one or more hidden layers of decision making nodes as well. In the case of our neural net, we included one hidden layer.</p>
+
+<ul>
+  <li>Since the players in our database all have twelve possible statistical categories, we knew we would need at least twelve input nodes, one for each value. In order to make predictions based on the previous four game stats for a player, we had to multiply the number of input nodes by four, giving us a total of forty-eight input nodes.</li>
+  <li>The output layer remains twelve nodes, one for each stat category, since we only want to predict one “week” of data. The hidden layer size was determined less mathematically than the others.</li>
+  <li>
+    <p>It was suggested based on our research to choose a number roughly halfway between the input and output layers, so we chose a node count of thirty. This hidden layer works behind the scenes and is the “magic” of the neural net. Fortunately, the specific node count in this layer is arbitrary in a sense, provided that the node count is within a reasonable range.</p>
+  </li>
+  <li>This provided us with a neural net with the shape of [48 x 30 x 12]. Below is an image of a [3 x 4 x 1] neural net:</li>
+</ul>
+
+<p><img src="http://neuralnetworksanddeeplearning.com/images/tikz1.png" alt="Architecture" /></p>
+
+<h3 id="input-layer">Input Layer</h3>
+
+<p>The values in this layer are essentially a likelihood of something occurring, so any input value must be between a 0 and 100% likelihood.</p>
+
+<h4 id="data-normalization">Data Normalization</h4>
+
+<p>Since inputs are a probability, they need to be normalized based on some criteria. In the case of our net, we looked up the current NFL record in each category, and determined our 100% max value by padding each record with some extra values in an attempt to make the ceiling be just out of reach of what seems possible to achieve.</p>
+
+<p>We then compare the input value with our maximum calculated value and zero, to grant a percentage. For example, if the max passing yards was determined to be 800 yards, and a player throws for 400 yards, their normalized passing yards would be input to the net as 800 / 400 = 0.5.</p>
+
+<h3 id="hidden-layer">Hidden Layer</h3>
+
+<p>The hidden layer has an inherent uncertainty.</p>
+
+<h3 id="output-layer">Output Layer</h3>
+
+<h2 id="assigning-weights-and-biases">Assigning Weights and Biases</h2>
+
+<p>Will explain importance of weights and biases, but will make sure to highlight that the magic of NN is that these will morph based on f and b prop, so the initial values just need to be random</p>
+
+<h3 id="sigmoid">Sigmoid</h3>
+
+<p>and will then go over our choice for sigmoid.</p>
+
+<h2 id="forward-propagation">Forward Propagation</h2>
+
+<p>Will then go over the basic idea of forward prop, sending data into input node, how values move from each layer via multiplying by weights and biases to achieve a value in the output layer.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mind On The Ball</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Mind On The Ball</li>
+          <li><a href="mailto:example@mail.com">example@mail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Welcome to Mind On The Ball. We want to teach you about neural nets through fantasy football data.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

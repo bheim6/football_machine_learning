@@ -6,9 +6,69 @@
 </description>
     <link>http://yourdomain.com/blog/</link>
     <atom:link href="http://yourdomain.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Nov 2016 09:21:21 -0700</pubDate>
-    <lastBuildDate>Tue, 08 Nov 2016 09:21:21 -0700</lastBuildDate>
+    <pubDate>Mon, 28 Nov 2016 17:04:50 -0700</pubDate>
+    <lastBuildDate>Mon, 28 Nov 2016 17:04:50 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Neural Net Basics and Forward Propagation</title>
+        <description>&lt;h2 id=&quot;what-is-a-neural-net&quot;&gt;What is a Neural Net?&lt;/h2&gt;
+
+&lt;p&gt;A Neural Net at its most basic level is a machine learning algorithm that uses a series of “decision-making” nodes to predict an outcome.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When researching we found this literature to be very helpful and would encourage anyone who is interested in building a neural net to check it out: &lt;a href=&quot;http://neuralnetworksanddeeplearning.com/about.html&quot;&gt;link to Neural Net and Deep Learning book&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;basic-architecture&quot;&gt;Basic Architecture&lt;/h2&gt;
+
+&lt;p&gt;All Neural Nets must have at least two layers, an input layer (where data is introduced to the net, either training data, or data used in making a prediction), and an output layer (result of the input layer data moving through the net). However, most neural nets contain one or more hidden layers of decision making nodes as well. In the case of our neural net, we included one hidden layer.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Since the players in our database all have twelve possible statistical categories, we knew we would need at least twelve input nodes, one for each value. In order to make predictions based on the previous four game stats for a player, we had to multiply the number of input nodes by four, giving us a total of forty-eight input nodes.&lt;/li&gt;
+  &lt;li&gt;The output layer remains twelve nodes, one for each stat category, since we only want to predict one “week” of data. The hidden layer size was determined less mathematically than the others.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It was suggested based on our research to choose a number roughly halfway between the input and output layers, so we chose a node count of thirty. This hidden layer works behind the scenes and is the “magic” of the neural net. Fortunately, the specific node count in this layer is arbitrary in a sense, provided that the node count is within a reasonable range.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;This provided us with a neural net with the shape of [48 x 30 x 12]. Below is an image of a [3 x 4 x 1] neural net:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://neuralnetworksanddeeplearning.com/images/tikz1.png&quot; alt=&quot;Architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;input-layer&quot;&gt;Input Layer&lt;/h3&gt;
+
+&lt;p&gt;The values in this layer are essentially a likelihood of something occurring, so any input value must be between a 0 and 100% likelihood.&lt;/p&gt;
+
+&lt;h4 id=&quot;data-normalization&quot;&gt;Data Normalization&lt;/h4&gt;
+
+&lt;p&gt;Since inputs are a probability, they need to be normalized based on some criteria. In the case of our net, we looked up the current NFL record in each category, and determined our 100% max value by padding each record with some extra values in an attempt to make the ceiling be just out of reach of what seems possible to achieve.&lt;/p&gt;
+
+&lt;p&gt;We then compare the input value with our maximum calculated value and zero, to grant a percentage. For example, if the max passing yards was determined to be 800 yards, and a player throws for 400 yards, their normalized passing yards would be input to the net as 800 / 400 = 0.5.&lt;/p&gt;
+
+&lt;h3 id=&quot;hidden-layer&quot;&gt;Hidden Layer&lt;/h3&gt;
+
+&lt;p&gt;The hidden layer has an inherent uncertainty.&lt;/p&gt;
+
+&lt;h3 id=&quot;output-layer&quot;&gt;Output Layer&lt;/h3&gt;
+
+&lt;h2 id=&quot;assigning-weights-and-biases&quot;&gt;Assigning Weights and Biases&lt;/h2&gt;
+
+&lt;p&gt;Will explain importance of weights and biases, but will make sure to highlight that the magic of NN is that these will morph based on f and b prop, so the initial values just need to be random&lt;/p&gt;
+
+&lt;h3 id=&quot;sigmoid&quot;&gt;Sigmoid&lt;/h3&gt;
+
+&lt;p&gt;and will then go over our choice for sigmoid.&lt;/p&gt;
+
+&lt;h2 id=&quot;forward-propagation&quot;&gt;Forward Propagation&lt;/h2&gt;
+
+&lt;p&gt;Will then go over the basic idea of forward prop, sending data into input node, how values move from each layer via multiplying by weights and biases to achieve a value in the output layer.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Nov 2016 14:11:30 +0000</pubDate>
+        <link>http://yourdomain.com/blog/2016/11/23/neural-net-basics-and-forward-propagation.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/blog/2016/11/23/neural-net-basics-and-forward-propagation.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Intro &amp; Project Goals</title>
